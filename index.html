@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Letter-Number Encryption</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #ffffff17;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 400px;
+        }
+
+        .form-container h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #444444;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #333333;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus {
+            border-color: #007bff;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        span {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .content {
+            text-align: center;
+            color: #ffffff;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay loop muted plays-inline class="video-background">
+        <source src="video/video_2023-08-07_00-13-23.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+        <h1></h1>
+        <p>.</p>
+    </div>
+
+    <div class="form-container">
+        <h1>Letter-Number Encryption</h1>
+        <div class="form-group">
+            <label for="inputText">Enter text:</label>
+            <input type="text" id="inputText">
+            <button onclick="encrypt()">Encrypt</button>
+        </div>
+        <div class="form-group">
+            <label for="encryptedText">Encrypted text:</label>
+            <span id="encryptedText"></span>
+        </div>
+        <div class="form-group">
+            <label for="encryptedNumber">Encrypted number:</label>
+            <span id="encryptedNumber"></span>
+        </div>
+        <div class="form-group">
+            <label for="inputNumber">Enter encrypted number:</label>
+            <input type="number" id="inputNumber">
+            <button onclick="decrypt()">Decrypt</button>
+        </div>
+        <div class="form-group">
+            <label for="decryptedNumber">Decrypted number:</label>
+            <span id="decryptedNumber"></span>
+        </div>
+        <div class="form-group">
+            <label for="decryptedText">Decrypted text:</label>
+            <span id="decryptedText"></span>
+        </div>
+    </div>
+
+    <script src="encryption.js"></script>
+</body>
+</html>
